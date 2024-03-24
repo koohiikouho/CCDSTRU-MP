@@ -227,18 +227,19 @@ int main()
 //System Facts
 
 
-	effThreeMaker(eff, effOne, effTwo, effThree);
+	
 	printBoard(effThree);
 	
 	do
 	{
-
+	
 	do
 	{
 	fflush(stdin);
 	scanf("%d %d", &pos.x, &pos.y);
 	}while(!(pos.x > 0 && pos.x < 7 && pos.x > 0 && pos.x < 7));
 	
+	effThreeMaker(eff, effOne, effTwo, effThree);
 	over = overChecker(effThree, seeOne, seeTwo, pos);	
 	readyPlayerMove(pos, over, next, good, effThree, effOne, effTwo, seeOne, seeTwo);
 	gameOver(over, next, pos, seeOne, seeTwo);
